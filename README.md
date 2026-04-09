@@ -28,3 +28,19 @@
    ```bash
    git clone [https://github.com/aLeonhart87/Vigilante_awar.git](https://github.com/aLeonhart87/Vigilante_awar.git)
    cd Vigilante_awar
+📊 How it Works
+The script follows a simple but effective logic gate:
+
+Detect: Monitors auth.log for "Failed password" strings.
+
+Counter: Increments a failure count per IP address.
+
+Analyze: Once the threshold is met, it fetches Geolocation data for the IP.
+
+Action: Executes a ufw deny command and sends a Telegram alert with the map location and ISP.
+
+🛡️ Why Bash?
+While tools like Fail2Ban exist, Vigilante_awar was built with a minimalist hardening philosophy. It is designed for environments where system overhead must be kept to a minimum and where external dependencies are a security risk.
+
+⚠️ Disclaimer
+This tool is intended for educational purposes and personal server hardening. Always test in a staging environment before deploying to production.
